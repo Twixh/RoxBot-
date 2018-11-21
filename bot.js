@@ -58,7 +58,7 @@ client.on('ready', () => {
   console.log('')
   console.log('')
   console.log('')
-  client.user.setActivity('www.Flix-Host.com')
+  client.user.setActivity('&help')
 });
 
 client.on('message', message => {
@@ -78,7 +78,7 @@ client.on('message', message => {
 		let timecooldown = '1hour';
 		if(!devs.includes(message.author.id)) return;
 		if(cooldownSetName.has(message.author.id)) return message.reply(`**${ms(ms(timecooldown))}** يجب عليك الانتظار`);
-		if(!args1) return message.channel.send(`**➥ Useage:** ${prefix}setname \`\`FlixBot\`\``).then(msg => msg.delete(7000));
+		if(!args1) return message.channel.send(`**➥ Useage:** ${prefix}setname \`\`RoxBot\`\``).then(msg => msg.delete(7000));
 		if(args1 == client.user.username) return message.reply('**البوت مسمى من قبل بهذا الاسم**').then(msg => msg.delete(5000));
 		
 		cooldownSetName.add(message.author.id);
@@ -106,28 +106,28 @@ client.on('message', message => {
 		}
 		if(command == prefix + 'setplay') {
 			if(!devs.includes(message.author.id)) return;
-			if(!args1) return message.channel.send(`**➥ Useage:** ${prefix}setplay \`\`www.Flix-Host.com\`\``).then(msg => msg.delete(7000));
+			if(!args1) return message.channel.send(`**➥ Useage:** ${prefix}setplay \`\`www.Rox.com\`\``).then(msg => msg.delete(7000));
 			client.user.setActivity(args1);
 			message.reply(`\`\`${args1}\`\` **تم تغيير حالة اللعب الى**`).then(msg => msg.delete(5000));
 			message.delete();
 		};
 		if(command == prefix + 'setwatch') {
 			if(!devs.includes(message.author.id)) return;
-			if(!args1) return message.channel.send(`**➥ Useage:** ${prefix}setwatch \`\`www.Flix-Host.com\`\``).then(msg => msg.delete(7000));
+			if(!args1) return message.channel.send(`**➥ Useage:** ${prefix}setwatch \`\`www.Rox.com\`\``).then(msg => msg.delete(7000));
 			client.user.setActivity(args1, { type: 'WATCHING' });
 			message.reply(`\`\`${args1}\`\` **تم تغيير حالة المشاهدة الى**`).then(msg => msg.delete(5000));
 			message.delete();
 		};
 		if(command == prefix + 'setlisten') {
 			if(!devs.includes(message.author.id)) return;
-			if(!args1) return message.channel.send(`**➥ Useage:** ${prefix}setlisten \`\`www.Flix-Host.com\`\``).then(msg => msg.delete(7000));
+			if(!args1) return message.channel.send(`**➥ Useage:** ${prefix}setlisten \`\`www.Rox.com\`\``).then(msg => msg.delete(7000));
 			client.user.setActivity(args1, { type: 'LISTENING' });
 			message.reply(`\`\`${args1}\`\` **تم تغيير حالة السماع الى**`).then(msg => msg.delete(5000));
 			message.delete();
 		};
 	    if(command == prefix + 'setstream') {
 			if(!devs.includes(message.author.id)) return;
-			if(!args1) return message.channel.send(`**➥ Useage:** ${prefix}setstream \`\`www.Flix-Host.com\`\``).then(msg => msg.delete(7000));
+			if(!args1) return message.channel.send(`**➥ Useage:** ${prefix}setstream \`\`www.Rox.com\`\``).then(msg => msg.delete(7000));
 			client.user.setActivity(args1, 'https://www.twitch.tv/xiaboodz_');
 			message.reply(`\`\`${args1}\`\` **تم تغيير حالة البث الى**`).then(msg => msg.delete(5000));
 			message.delete();
@@ -176,7 +176,7 @@ client.on('message', message => {
     if (err) console.log(err)
   });
 
-  wUser.send(`**◄══════════► [ Flix-Host ] ◄══════════►**\n\n\n**➥ لقد اخذت وارن**\n\n**➥ في سيرفر:**\n➥ [ ${message.guild.name} ]\n\n**➥ بواسطة:**\n➥ [ ${message.author.username}#${message.author.discriminator} ]\n\n**➥ السبب:**\n➥ [ ${reason} ]\n\n**➥ الوارن رقم:**\n➥[ ${warns[wUser.id].warns} ]\n\n\n**◄══════════► [ Flix-Host ] ◄══════════►**`);
+  wUser.send(`**◄══════════► [ RoxBot ] ◄══════════►**\n\n\n**➥ لقد اخذت وارن**\n\n**➥ في سيرفر:**\n➥ [ ${message.guild.name} ]\n\n**➥ بواسطة:**\n➥ [ ${message.author.username}#${message.author.discriminator} ]\n\n**➥ السبب:**\n➥ [ ${reason} ]\n\n**➥ الوارن رقم:**\n➥[ ${warns[wUser.id].warns} ]\n\n\n**◄══════════► [ RoxBot ] ◄══════════►**`);
 
   let warnEmbed = new Discord.RichEmbed()
   .setTitle(':no_entry_sign: **[WARN]**')
@@ -340,7 +340,7 @@ if(warns[wUser.id].warns == 2){
 // كود الهلب
     if(command == prefix + 'help') {
 		message.channel.send(`
-◄════════════► [ Flix-Host ] ◄════════════►
+◄════════════► [ RoxBot ] ◄════════════►
 
 :books: **اوامر الهلب**
 
@@ -350,12 +350,12 @@ if(warns[wUser.id].warns == 2){
 
 ⫸【3】 ${prefix}help-admin 『لرؤية قائمة الهلب للادمن』
 
-◄════════════► [ Flix-Host ] ◄════════════►
+◄════════════► [ RoxBot ] ◄════════════►
 `);
 	};
     if (command == prefix + 'help-member') {
 		message.author.send(`
-**◄════════════► [ Flix-Host ] ◄════════════►**
+**◄════════════► [ RoxBot ] ◄════════════►**
 
 :dividers: **الاوامر العامة**
 
@@ -393,7 +393,7 @@ if(warns[wUser.id].warns == 2){
 
 ⫸【7】 \`\`${prefix}points\`\` **OR** \`\`${prefix}points <mention>\`\` 『لرؤية نقاطك او نقاط اشخاص اخرين باللعبه』
 
-**◄════════════► [ Flix-Host ] ◄════════════►**`).catch(err =>{console.log('[LOG] =>' + err);
+**◄════════════► [ RoxBot ] ◄════════════►**`).catch(err =>{console.log('[LOG] =>' + err);
 message.reply('**عندك اعدادات الخصوصيه لا يمكنني ان ارسل الى الخاص حقك**').then(msg => msg.delete(5000));
 });
 
@@ -403,7 +403,7 @@ message.reply('**عندك اعدادات الخصوصيه لا يمكنني ان
     if (command == prefix + 'help-staff') {
 		if(!message.member.hasPermission('MUTE_MEMBERS')) return;
 		message.author.send(`
-**◄════════════► [ Flix-Host ] ◄════════════►**
+**◄════════════► [ RoxBot ] ◄════════════►**
 
 :dividers: **الاوامر العامة**
 
@@ -451,14 +451,14 @@ message.reply('**عندك اعدادات الخصوصيه لا يمكنني ان
 
 ⫸【4】 \`\`${prefix}clear <number>\`\` 『لمسح الشات بعدد』
 
-**◄════════════► [ Flix-Host ] ◄════════════►**`);
+**◄════════════► [ RoxBot ] ◄════════════►**`);
 		message.reply('**شوف الخاص :envelope_with_arrow:**').then(msg => msg.delete(3000));
 		message.delete();
 	};
     if(command == prefix + 'help-admin') {
 		if(!message.member.hasPermission('ADMINISTRATOR')) return;
 		message.author.send(`
-**◄════════════► [ Flix-Host ] ◄════════════►**
+**◄════════════► [ RoxBot ] ◄════════════►**
 
 :dividers: **الاوامر العامة**
 
@@ -530,7 +530,7 @@ message.reply('**عندك اعدادات الخصوصيه لا يمكنني ان
 
 ⫸【11】 \`\`${prefix}bc <bc words>\`\` 『لارسال رسالة الى جميع اعضاء السيرفر』
 
-**◄════════════► [ Flix-Host ] ◄════════════►**`);
+**◄════════════► [ RoxBot ] ◄════════════►**`);
 		message.reply('**شوف الخاص :envelope_with_arrow:**').then(msg => msg.delete(3000));
 		message.delete();
 	};
@@ -850,7 +850,7 @@ message.reply('**عندك اعدادات الخصوصيه لا يمكنني ان
 			.setThumbnail(client.user.avatarURL)
 			.addField('**الدعوات**', `**➥** [ شخص **${Number(inviteCount)}** ]`)
 			.addField('**تم الانضمام للسيرفر من**', `**➥** [ يوم **${daysJoined.toFixed(0)}** ]`)
-			.addField('**رابط دعوة الانضمام**', `**➥** [ **https://discord.gg/${inviteCode || 'Zm2U6we'}** ]`)
+			.addField('**رابط دعوة الانضمام**', `**➥** [ **https://discord.gg/${inviteCode || 'Hhnu7UW'}** ]`)
 			.setColor('GRAY')
 			.setTimestamp()
 			.setFooter(Tag, Avatar)
